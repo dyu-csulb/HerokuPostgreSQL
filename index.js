@@ -59,6 +59,21 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/total", (req, res) => {
+  const sql = "SELECT count(*) as Total FROM CUSTOMER";
+  pool.query(sql, [], (err, result) => {
+      var message = "";
+      var data = {};
+      if(err) {
+          message = `Error - ${err.message}`;
+      } else {
+          message = "success";
+          data = result.rows;
+      };
+      res.json(data);
+  });
+});
+
 
 app.get("/input", (req, res) => {
   res.render("input");
