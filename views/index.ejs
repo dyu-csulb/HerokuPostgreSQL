@@ -18,10 +18,10 @@
             <tbody>
                 <% model.forEach(product => { %>
                     <tr>
-                        <td><%= product.prod_id %></td>
-                        <td><%= product.prod_name %></td>
-                        <td><%= product.prod_desc %></td>
-                        <td><%= product.prod_price %></td>
+                        <td><%= product.cusid %></td>
+                        <td><%= product.cusfname %></td>
+                        <td><%= product.cuslname %></td>
+                        <td><%= product.cusstate %></td>
                     </tr>
                 <% }) %>
             </tbody>

@@ -42,7 +42,7 @@ app.listen(process.env.PORT || 3000, () => {
 ===================*/
 app.get("/", (req, res) => {
   //res.send ("Hello world...");
-  const sql = "SELECT * FROM PRODUCT ORDER BY PROD_ID";
+  const sql = "SELECT * FROM customer";
   pool.query(sql, [], (err, result) => {
       var message = "";
       var model = {};
